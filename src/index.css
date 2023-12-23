@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&family=Poppins:ital@1&family=Roboto&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+  html {
+      font-family: 'Poppins', sans-serif;
+  }
+}
+
+.bgImage {
+  @apply bg-cover bg-center bg-fixed bg-no-repeat ;
+  background-image: url('../src//assets/heroBg.jpg'); /* Adjust the path accordingly */
+}
