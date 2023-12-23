@@ -24,12 +24,12 @@ const TopSec = () => {
         </div>
     </div>
     <div className='grid grid-cols-6 md:grid-cols-10 w-full h-auto bg-green-300 py-5 items-center'>
-        <div className='w-full col-span-2 md:col-span-3  flex justify-center items-center'>
+        <div className='w-full col-span-2 md:col-span-3  flex justify-center items-center px-3'>
             <img src={Logo} width={90} alt='logo'/>
             <h3 className='text-white text-1xl font-black font-signature'>Humming Bird</h3>
         </div>
-        <div className='col-span-4 px-4 justify-center items-center'>
-            <SearchComp className='w-30'/>
+        <div className='col-span-4 px-8 justify-center items-center'>
+            <SearchComp className=''/>
         </div>
         <div className='hidden md:col-span-3 md:flex justify-center items-center'>
             <PrimaryButtons />
