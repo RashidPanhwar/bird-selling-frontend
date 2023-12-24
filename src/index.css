@@ -14,6 +14,11 @@
 }
 
 .bgImage {
-  @apply bg-cover bg-center bg-fixed bg-no-repeat ;
+  @apply bg-cover bg-center bg-no-repeat ;
   background-image: url('../src//assets/heroBg.jpg'); /* Adjust the path accordingly */
+}
+
+.whyUsBgImage {
+  @apply bg-cover bg-center bg-fixed bg-no-repeat ;
+  background-image: url('../src/assets/Rectangle\ 48.png'); /* Adjust the path accordingly */
 }

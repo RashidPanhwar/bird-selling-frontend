@@ -9,8 +9,8 @@ const HeroSec = () => {
             
         </div>
         <div className='flex mt-10'>
-            <PrimaryButtons className='' />
-            <PrimaryButtons />
+            <PrimaryButtons name='View more' />
+            <PrimaryButtons name='To Shop' />
         </div>
     </div>
   )

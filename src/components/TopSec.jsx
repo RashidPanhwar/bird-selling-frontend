@@ -3,8 +3,16 @@ import Logo from '../assets/Single-Flying-Bird.png';
 import SearchComp from './SearchComp';
 import PrimaryButtons from './PrimaryButtons';
 import { IoIosMenu } from "react-icons/io";
+import Navbar from './Navbar';
 
 const TopSec = () => {
+    const name = "Login";
+
+    const topLinks = [
+        {name: "news letter", link: "#news"},
+        {name: "Contact us", link: "#contact"},
+        {name: "faqs", link: "#faqs"}
+    ]
   return (
     <section>
     <div className='flex w-full h-10 bg-green-400 '>
@@ -16,10 +24,13 @@ const TopSec = () => {
             </div>
             <div className='hidden md:flex max-w-screen-lg justify-center items-center
             gap-4 pr-10 text-white right-8 '>
-                <h3 className='text-base font-black uppercase cursor-pointer'>news letter</h3>
-                <h3 className='text-base font-black uppercase border-r-2 border-l-2 
-                border-gray-500 px-4 py-2 cursor-pointer'>contact us</h3>
-                <h3 className='text-base font-black uppercase cursor-pointer'>faqs</h3>
+                {
+                    topLinks.map((items) => {
+                        return <h3 className='text-base font-black uppercase cursor-pointer
+                        border-r-2  border-gray-500 px-4 py-2'> 
+                        <a href={items.link}> {items.name} </a> </h3>
+                    })
+                }
             </div>
         </div>
     </div>
@@ -32,8 +43,8 @@ const TopSec = () => {
             <SearchComp className=''/>
         </div>
         <div className='hidden md:col-span-3 md:flex justify-center items-center'>
-            <PrimaryButtons />
-            <PrimaryButtons />
+            <PrimaryButtons name='Login' />
+            <PrimaryButtons name='Registration' />
         </div>
     </div>
     <div className='grid grid-cols-4 md:grid-cols-12 w-full justify-between items-center 
@@ -41,19 +52,10 @@ const TopSec = () => {
         <div className='col-span-2 md:col-span-3 text-center'>
             <h3 className='text-white text-base'>browse category</h3>
         </div>
-        <div className='col-span-2 flex justify-end items-center md:hidden'>
-            <IoIosMenu className='text-white text-3xl font-black border-2 
-            border-white rounded-sm'/>
+        <div className='col-span-2 flex md:col-span-9 justify-end md:justify-center items-center'>
+            <Navbar />
         </div>
-        <div className='hidden md:flex col-span-9 text-white justify-center 
-        items-center gap-4'>
-            <h3 className='font-black text-base cursor-pointer uppercase'>Home</h3>
-            <h3 className='font-black text-base cursor-pointer uppercase'>about us</h3>
-            <h3 className='font-black text-base cursor-pointer uppercase'>shop</h3>
-            <h3 className='font-black text-base cursor-pointer uppercase'>maweshi mandi</h3>
-            <h3 className='font-black text-base cursor-pointer uppercase'>blogs</h3>
-            <h3 className='font-black text-base cursor-pointer uppercase'>contact us</h3>
-        </div>
+        
     </div>
     </section>
   )
