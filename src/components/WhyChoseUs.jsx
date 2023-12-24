@@ -4,6 +4,11 @@ import { TiTick } from "react-icons/ti";
 import { CgDanger } from "react-icons/cg";
 
 const WhyChoseUs = () => {
+    const cards = [
+        { icon: BiSolidLike, heading: "Why chose us", para:  "farmGhar is the most trusted online platform for all its customers All our vendors are verified through NADRA so that none of our customers face any fraudulent activity" },
+        { icon: TiTick, heading: "Why chose us", para:  "farmGhar is the most trusted online platform for all its customers All our vendors are verified through NADRA so that none of our customers face any fraudulent activity" },
+        { icon: CgDanger, heading: "Why chose us", para:  "farmGhar is the most trusted online platform for all its customers All our vendors are verified through NADRA so that none of our customers face any fraudulent activity" }
+    ]
   return (
     <div className='whyUsBgImage py-10 px-10 brightness-75 md:h-[70vh]'>
         <div className='drop-shadow-2xl '>
@@ -18,39 +23,19 @@ const WhyChoseUs = () => {
                 </p>
             </div>
             <div className='hidden grid-cols-3  text-white py-10 gap-10 md:flex justify-center items-center'>
-                <div className='bg-black  py-5 px-5 rounded-lg'>
-                    <div className='py-2'>
-                        <span> <BiSolidLike size={30} /> </span>
-                        <h3 className='text-lg font-black capitalize'> Reliable Service </h3>
-                        <p className='mx-auto text-sm'>
-                        farmGhar is the most trusted online platform for all its customers. 
-                        All our vendors are verified through NADRA so that none of our customers 
-                        face any fraudulent activity.
-                        </p>
+                {
+                    cards.map((items, i) => {
+                        return <div key={i} className='bg-black  py-5 px-5 rounded-lg'>
+                        <div className='py-2'>
+                            <span> {items.icon} </span>
+                            <h3 className='text-lg font-black capitalize'> {items.heading} </h3>
+                            <p className='mx-auto text-sm'>
+                            {items.para}
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className='bg-black  py-5 px-5 rounded-lg'>
-                    <div className='py-2'>
-                        <span> <BiSolidLike size={30} /> </span>
-                        <h3 className='text-lg font-black capitalize'> Reliable Service </h3>
-                        <p className='mx-auto text-sm'>
-                        farmGhar is the most trusted online platform for all its customers. 
-                        All our vendors are verified through NADRA so that none of our customers 
-                        face any fraudulent activity.
-                        </p>
-                    </div>
-                </div>
-                <div className='bg-black  py-5 px-5 rounded-lg'>
-                    <div className='py-2'>
-                        <span> <BiSolidLike size={30} /> </span>
-                        <h3 className='text-lg font-black capitalize'> Reliable Service </h3>
-                        <p className='mx-auto text-sm'>
-                        farmGhar is the most trusted online platform for all its customers. 
-                        All our vendors are verified through NADRA so that none of our customers 
-                        face any fraudulent activity.
-                        </p>
-                    </div>
-                </div>
+                    })
+                }
             </div>
             
         </div>

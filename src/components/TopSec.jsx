@@ -2,11 +2,9 @@ import React from 'react'
 import Logo from '../assets/Single-Flying-Bird.png';
 import SearchComp from './SearchComp';
 import PrimaryButtons from './PrimaryButtons';
-import { IoIosMenu } from "react-icons/io";
 import Navbar from './Navbar';
 
 const TopSec = () => {
-    const name = "Login";
 
     const topLinks = [
         {name: "news letter", link: "#news"},

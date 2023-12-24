@@ -1,6 +1,5 @@
 import React from 'react'
 import { FaArrowDown } from "react-icons/fa6";
-import FeatureImage from '../assets/featureCategory/featureCategory.png';
 import one from '../assets/featureCategory/one.png';
 import two from '../assets/featureCategory/two.png';
 import three from '../assets/featureCategory/three.png';
